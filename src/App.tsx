@@ -22,16 +22,16 @@ function App() {
     fetchPopularMovies();
   }, []);
   return (
-    <div className='App'>
+    <div className="App">
       <FilterButtons
         popular={popular}
         setFiltered={setFiltered}
         activeGenre={activeGenre}
         setActiveGenre={setActiveGenre}
       />
-      <motion.div layout className='popular-movies'>
+      <motion.div layout className="popular-movies">
         <AnimatePresence>
-          {filtered?.map((movie) => (
+          {filtered?.map((movie: any) => (
             <Movies key={movie.id} movie={movie} />
           ))}
         </AnimatePresence>

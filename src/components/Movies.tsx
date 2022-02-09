@@ -6,9 +6,8 @@ type MovieType = {
   title: string;
   backdrop_path: string;
 };
-const Movies = ({ movie }) => {
+const Movies = ({ movie }: { movie: MovieType }) => {
   const allMovies: MovieType = movie;
-  console.log("allMovies: ", allMovies);
 
   return (
     <motion.div
