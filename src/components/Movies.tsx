@@ -16,12 +16,14 @@ const Movies = ({ movie }) => {
       exit={{ opacity: 0 }}
       initial={{ opacity: 1 }}
       layout
-      className='movies'>
+      className="movies"
+    >
       <h2>{allMovies.title}</h2>
       <LazyLoadImage
         src={`https://image.tmdb.org/t/p/w500${allMovies.backdrop_path}`}
-        alt=''
-        className='images'
+        alt=""
+        className="images"
+        effect="blur"
       />
     </motion.div>
   );
